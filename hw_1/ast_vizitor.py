@@ -10,8 +10,8 @@ class ASTVisitor(ast.NodeVisitor):
         self.graph.add_node(node, shape='box', label=f'FunctionDef: {node.name}', fillcolor='#A49393', style='filled')
         for arg in self.visit(node.args):
             self.graph.add_edge(node, arg)
-        for item in node.body:
-            self.graph.add_edge(node, self.visit(item))
+        for body_item in node.body:
+            self.graph.add_edge(node, self.visit(body_item))
         return node
 
     def visit_arguments(self, node):
@@ -41,8 +41,9 @@ class ASTVisitor(ast.NodeVisitor):
         self.graph.add_node(node, shape='box', label='For', fillcolor='#EBE0D0', style='filled')
         self.graph.add_edge(node, self.visit(node.target))
         self.graph.add_edge(node, self.visit(node.iter))
-        for item in node.body:
-            self.graph.add_edge(node, self.visit(item))
+
+        for body_item in node.body:
+            self.graph.add_edge(node, self.visit(body_item))
         return node
 
     def visit_Call(self, node):
