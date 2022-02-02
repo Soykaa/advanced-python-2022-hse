@@ -4,7 +4,7 @@ import inspect
 import astunparse as astunparse
 import networkx as nx
 
-from ast_vizitor import ASTVisitor
+from ast_visitor import ASTVisitor
 from fib_numbers import fib_numbers
 
 if __name__ == '__main__':
