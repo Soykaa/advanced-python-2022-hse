@@ -1,13 +1,14 @@
-def fib_numbers(n):
-    fib_num1 = fib_num2 = 1
-    if n == 1:
-        return fib_num2
-    for i in range(2, n):
-        fib_num3 = fib_num1 + fib_num2
-        fib_num1 = fib_num2
-        fib_num2 = fib_num3
-    return fib_num2
+import ast
+import inspect
 
+import astunparse as astunparse
+import networkx as nx
+
+from ast_vizitor import ASTVisitor
+from fib_numbers import fib_numbers
 
 if __name__ == '__main__':
-    print(fib_numbers(3))
+    ast_visitor = ASTVisitor()
+    ast_visitor.visit(ast.parse(inspect.getsource(fib_numbers)))
+    # print(astunparse.dump(ast.parse(inspect.getsource(fib_numbers))))
+    nx.drawing.nx_pydot.to_pydot(ast_visitor.graph).write_png("artifacts/fib_num_ast.png")
