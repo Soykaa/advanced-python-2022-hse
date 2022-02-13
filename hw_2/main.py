@@ -9,8 +9,8 @@ def dim_is_ok(lists):
 
 
 def generate_table(lists):
-    if not dim_is_ok(lists):
-        return ""
+    if not dim_is_ok(lists) or len(lists) == 0:
+        raise Exception("Invalid input")
     return "\\begin{tabular}{" + "l" * len(lists[0]) + "}\n" + \
            "\\\\\n".join(map(lambda line: "&".join(line), lists)) + \
            "\n\\end{tabular}" + "\\\\" * 5 + "\n"
@@ -21,11 +21,11 @@ def generate_pic():
     return "\\includegraphics[width=\\linewidth]{artifacts/fib_num_ast.png}\n"
 
 
-def generate_tex_doc(table):
+def generate_tex_doc(lists):
     pic = generate_pic()
     return "\\documentclass{article}\n\\usepackage[utf8]{inputenc}\n" \
            "\\usepackage{graphicx}\n\\begin{document}\n\n" \
-           + generate_table(table) + pic + "\n\\end{document}"
+           + generate_table(lists) + pic + "\n\\end{document}"
 
 
 if __name__ == '__main__':
