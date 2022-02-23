@@ -1,8 +1,8 @@
 import numpy as np
 
 from hw_3.matrix import Matrix
-from hw_3.mul_mixin import HMatrix
-from hw_3.save_mixin import MMatrix
+from hw_3.mixins.mul_mixin import HMatrix
+from hw_3.mixins.save_mixin import MMatrix
 
 if __name__ == '__main__':
     np.random.rand(4)
