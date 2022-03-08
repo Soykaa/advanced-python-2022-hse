@@ -4,6 +4,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 import multiprocessing as mp
+from datetime import datetime
 
 
 def integrate(f, a, b, job_n, n_jobs=1, n_iter=1000):
@@ -28,17 +29,25 @@ def execute_pool_tasks(executor, n_jobs):
 
 
 if __name__ == '__main__':
-    with open("artifacts/medium.txt", "w") as file:
-        cpu_num = mp.cpu_count()
-        for n_jobs in range(1, 2 * cpu_num + 1):
-            thread_pool_executor = ThreadPoolExecutor(max_workers=10)
-            start, end, res = execute_pool_tasks(thread_pool_executor, n_jobs)
-            file.write(f'{n_jobs} threads...\n\t'
-                       f'Res: {res}\n\t'
-                       f'Time: {end - start} sec\n')
+    log = open("artifacts/medium/medium_logs.txt", "w")
+    file = open("artifacts/medium/medium_time.txt", "w")
 
-            process_pool_executor = ProcessPoolExecutor(max_workers=10)
-            start, end, res = execute_pool_tasks(process_pool_executor, n_jobs)
-            file.write(f'{n_jobs} processes...\n\t'
-                       f'Res: {res}\n\t'
-                       f'Time: {end - start} sec\n\n')
+    cpu_num = mp.cpu_count()
+    for n_jobs in range(1, 2 * cpu_num + 1):
+        thread_pool_executor = ThreadPoolExecutor(max_workers=10)
+        ts = datetime.now().strftime("%H:%M:%S")
+        start, end, res = execute_pool_tasks(thread_pool_executor, n_jobs)
+        log.write(f"{n_jobs} threads started;\n\t"
+                  f"start: {ts}\n\t"
+                  f"duration: {end - start}\n\n")
+        file.write(f"{n_jobs} threads...\n\t"
+                   f"time: {end - start} sec\n")
+
+        process_pool_executor = ProcessPoolExecutor(max_workers=10)
+        ts = datetime.now().strftime("%H:%M:%S")
+        start, end, res = execute_pool_tasks(process_pool_executor, n_jobs)
+        log.write(f"{n_jobs} processes started;\n\t"
+                  f"start: {ts}\n\t"
+                  f"duration: {end - start}\n\n")
+        file.write(f"{n_jobs} processes...\n\t"
+                   f"time: {end - start} sec\n\n")
