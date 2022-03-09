@@ -7,7 +7,7 @@ import multiprocessing as mp
 from datetime import datetime
 
 
-def integrate(f, a, b, job_n, n_jobs=1, n_iter=1000):
+def integrate(f, a, b, job_n, n_jobs=1, n_iter=1000_000):
     acc = 0
     step = (b - a) / n_iter
     left_b, right_b = n_iter // n_jobs * job_n, min(n_iter, n_iter // n_jobs * (job_n + 1))

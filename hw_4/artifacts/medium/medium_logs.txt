@@ -1,128 +1,128 @@
 1 threads started;
-	start: 02:48:31
-	duration: 0.0005128383636474609
+	start: 21:47:01
+	duration: 0.12588286399841309
 
 1 processes started;
-	start: 02:48:31
-	duration: 0.012356996536254883
+	start: 21:47:01
+	duration: 0.1423492431640625
 
 2 threads started;
-	start: 02:48:31
-	duration: 0.0006165504455566406
+	start: 21:47:01
+	duration: 0.13776087760925293
 
 2 processes started;
-	start: 02:48:31
-	duration: 0.013889312744140625
+	start: 21:47:02
+	duration: 0.08686637878417969
 
 3 threads started;
-	start: 02:48:31
-	duration: 0.0005817413330078125
+	start: 21:47:02
+	duration: 0.1469130516052246
 
 3 processes started;
-	start: 02:48:31
-	duration: 0.017000675201416016
+	start: 21:47:02
+	duration: 0.06394815444946289
 
 4 threads started;
-	start: 02:48:31
-	duration: 0.0007421970367431641
+	start: 21:47:02
+	duration: 0.12058162689208984
 
 4 processes started;
-	start: 02:48:31
-	duration: 0.019670963287353516
+	start: 21:47:02
+	duration: 0.05259060859680176
 
 5 threads started;
-	start: 02:48:31
-	duration: 0.0009112358093261719
+	start: 21:47:02
+	duration: 0.121368408203125
 
 5 processes started;
-	start: 02:48:31
-	duration: 0.016437053680419922
+	start: 21:47:02
+	duration: 0.07705330848693848
 
 6 threads started;
-	start: 02:48:31
-	duration: 0.0007152557373046875
+	start: 21:47:02
+	duration: 0.12651896476745605
 
 6 processes started;
-	start: 02:48:31
-	duration: 0.017263174057006836
+	start: 21:47:02
+	duration: 0.06612253189086914
 
 7 threads started;
-	start: 02:48:31
-	duration: 0.0012695789337158203
+	start: 21:47:02
+	duration: 0.12213706970214844
 
 7 processes started;
-	start: 02:48:31
-	duration: 0.017313241958618164
+	start: 21:47:03
+	duration: 0.061406850814819336
 
 8 threads started;
-	start: 02:48:31
-	duration: 0.0009417533874511719
+	start: 21:47:03
+	duration: 0.12134599685668945
 
 8 processes started;
-	start: 02:48:31
-	duration: 0.01694488525390625
+	start: 21:47:03
+	duration: 0.10518765449523926
 
 9 threads started;
-	start: 02:48:31
-	duration: 0.0010221004486083984
+	start: 21:47:03
+	duration: 0.2294783592224121
 
 9 processes started;
-	start: 02:48:31
-	duration: 0.01905989646911621
+	start: 21:47:03
+	duration: 0.0920114517211914
 
 10 threads started;
-	start: 02:48:31
-	duration: 0.0009202957153320312
+	start: 21:47:03
+	duration: 0.12369132041931152
 
 10 processes started;
-	start: 02:48:31
-	duration: 0.017243146896362305
+	start: 21:47:03
+	duration: 0.07090997695922852
 
 11 threads started;
-	start: 02:48:31
-	duration: 0.0011818408966064453
+	start: 21:47:03
+	duration: 0.16256308555603027
 
 11 processes started;
-	start: 02:48:31
-	duration: 0.01880168914794922
+	start: 21:47:04
+	duration: 0.06322336196899414
 
 12 threads started;
-	start: 02:48:31
-	duration: 0.0011410713195800781
+	start: 21:47:04
+	duration: 0.1218118667602539
 
 12 processes started;
-	start: 02:48:31
-	duration: 0.017507076263427734
+	start: 21:47:04
+	duration: 0.0688927173614502
 
 13 threads started;
-	start: 02:48:31
-	duration: 0.0011763572692871094
+	start: 21:47:04
+	duration: 0.1211099624633789
 
 13 processes started;
-	start: 02:48:31
-	duration: 0.019296884536743164
+	start: 21:47:04
+	duration: 0.06123185157775879
 
 14 threads started;
-	start: 02:48:31
-	duration: 0.0011665821075439453
+	start: 21:47:04
+	duration: 0.1236417293548584
 
 14 processes started;
-	start: 02:48:31
-	duration: 0.017392873764038086
+	start: 21:47:04
+	duration: 0.062337636947631836
 
 15 threads started;
-	start: 02:48:31
-	duration: 0.0013210773468017578
+	start: 21:47:04
+	duration: 0.12111258506774902
 
 15 processes started;
-	start: 02:48:31
-	duration: 0.018208980560302734
+	start: 21:47:04
+	duration: 0.06218695640563965
 
 16 threads started;
-	start: 02:48:31
-	duration: 0.0013020038604736328
+	start: 21:47:04
+	duration: 0.12115168571472168
 
 16 processes started;
-	start: 02:48:31
-	duration: 0.018210887908935547
+	start: 21:47:04
+	duration: 0.062157630920410156
 

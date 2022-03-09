@@ -1,6 +1,8 @@
 import concurrent
 import time
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+from multiprocessing import Process
+from threading import Thread
 
 NUMBER = 30000
 ITERATIONS = 10
@@ -25,13 +27,12 @@ def execute_sync_task():
     return fst_timestamp, snd_timestamp
 
 
-def execute_pool_tasks(executor):
-    futures = []
+def execute_tasks(input_list):
     fst_timestamp = time.time()
-    for _ in range(ITERATIONS):
-        futures.append(executor.submit(fib_numbers, NUMBER))
-    for future in concurrent.futures.as_completed(futures):
-        future.result()
+    for el in input_list:
+        el.start()
+    for el in input_list:
+        el.join()
     snd_timestamp = time.time()
     return fst_timestamp, snd_timestamp
 
@@ -40,9 +41,9 @@ if __name__ == '__main__':
     with open("artifacts/easy.txt", "w") as file:
         start, end = execute_sync_task()
         file.write("Synchronous: " + str(end - start) + " sec\n\n")
-        thread_pool_executor = ThreadPoolExecutor(max_workers=10)
-        start, end = execute_pool_tasks(thread_pool_executor)
+        threads = [Thread(target=fib_numbers, args=(NUMBER,)) for _ in range(ITERATIONS)]
+        start, end = execute_tasks(threads)
         file.write("Threading: " + str(end - start) + " sec\n\n")
-        process_pool_executor = ProcessPoolExecutor(max_workers=10)
-        start, end = execute_pool_tasks(process_pool_executor)
+        processes = [Process(target=fib_numbers, args=(NUMBER,)) for _ in range(ITERATIONS)]
+        start, end = execute_tasks(processes)
         file.write("Multiprocessing: " + str(end - start) + " sec\n\n")

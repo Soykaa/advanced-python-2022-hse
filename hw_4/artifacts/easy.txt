@@ -1,6 +1,6 @@
-Synchronous: 0.2983663082122803 sec
+Synchronous: 0.26363182067871094 sec
 
-Threading: 0.33182287216186523 sec
+Threading: 0.2958962917327881 sec
 
-Multiprocessing: 1.2115375995635986 sec
+Multiprocessing: 0.11763119697570801 sec
 
